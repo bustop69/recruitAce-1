@@ -11,3 +11,5 @@ In the future, we plan to enhance the app by adding search functionalities that 
 
 ![Media_231030_094458](https://github.com/OpenZeppelin/openzeppelin-contracts/assets/109417931/da378969-ade7-4d09-80b4-4e228bc45763)
 ![Media_231031_005118](https://github.com/OpenZeppelin/openzeppelin-contracts/assets/109417931/329982e8-e39d-40ba-b413-669b966e48d5)
+
+![Media_231031_005526](https://github.com/OpenZeppelin/openzeppelin-contracts/assets/109417931/0b452f69-81cd-4694-aae2-446406c2df02)
