@@ -50,4 +50,7 @@ Front End -
       *   on line 12, update API_URL variable to the url returned by Ngrok and make sure to add "api/jobs/" at the end
 *   Run command - npm start
 *   This will return an QR Code
-*   Final step, download expo on your phone and scan the QR code to launch the project. 
+*   Final step, download expo on your phone and scan the QR code to launch the project.
+
+<h2>🚀 Testing </h2>
+PHPUnit file has been set up in the backend folder, if there are any issues with the Database or connection, run command - php artisan test to test the errors 
