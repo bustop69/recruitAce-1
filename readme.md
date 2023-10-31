@@ -1,5 +1,6 @@
 
-recruitAce 
+<h1 align="center">recruitAce</h1>
+
 
 RecruitAce is a mobile application designed for recruiters to connect with the most qualified candidates for their teams, based on both skills and requirements. 
 
