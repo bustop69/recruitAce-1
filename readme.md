@@ -24,9 +24,10 @@ Technologies used in the project:
   
 <h2>🔌 Set up Instructions</h2>
 
-Backend
+Backend - 
 *   Clone this repo
-*   Open the back end folder and run command - npm install
+*   Open the folder in VsCode
+*   Run command - npm install
 *   In .env file configure the below 3 lines 
       *   DB_DATABASE= the schema of your mySQL database
       *   DB_USERNAME= login name
@@ -35,4 +36,18 @@ Backend
 *  Run command - php artisan serve
       *   This starts the local host to start listening to HTTP requests
 
+Middleware 
+*   In React native, you might get errors trying to connect to local host serve. So its the best if we use a proxy.
+*   Download Ngrok - https://ngrok.com/
+*   Use Ngrok to connect to the local host and Ngrok will return an url
+*   The url returned is the one we will use
 
+Front End
+*   Open the folder in VsCode
+*   Run command - npm install
+*   Navigate to the below folder
+      *   Utilities -> redux -> action.js
+      *   on line 12, update API_URL variable to the url returned by Ngrok and make sure to add "api/jobs/" at the end
+*   Run command - npm start
+*   This will return an QR Code
+*   Final step, download expo on your phone and scan the QR code to launch the project. 
