@@ -27,7 +27,7 @@ Technologies used in the project:
 
 Backend - 
 *   Clone this repo
-*   Open the folder in VsCode
+*   Open the back end folder in VS Code
 *   Run command - npm install
 *   In .env file configure the below 3 lines 
       *   DB_DATABASE= the schema of your mySQL database
@@ -38,13 +38,13 @@ Backend -
       *   This starts the local host to start listening to HTTP requests
 
 Middleware -
-*   In React native, you might get errors trying to connect to local host serve. So its the best if we use a proxy.
+*   In React native, you might get errors trying to connect to local host server. So its the best if we use a proxy.
 *   Download Ngrok - https://ngrok.com/
 *   Use Ngrok to connect to the local host and Ngrok will return an url
 *   The url returned is the one we will use
 
 Front End -
-*   Open the folder in VsCode
+*   Open the front end folder in VS Code
 *   Run command - npm install
 *   Navigate to the below folder
       *   Utilities -> redux -> action.js
