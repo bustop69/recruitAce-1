@@ -13,7 +13,7 @@ In the future, we plan to enhance the app by adding search functionalities that 
 ![Media_231030_094458](https://github.com/OpenZeppelin/openzeppelin-contracts/assets/109417931/da378969-ade7-4d09-80b4-4e228bc45763)
 ![Media_231031_005118](https://github.com/OpenZeppelin/openzeppelin-contracts/assets/109417931/329982e8-e39d-40ba-b413-669b966e48d5)
 
-<h2>💻 Tecnologies</h2>
+<h2>💻 Technologies</h2>
 
 Technologies used in the project:
 
