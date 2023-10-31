@@ -36,13 +36,13 @@ Backend -
 *  Run command - php artisan serve
       *   This starts the local host to start listening to HTTP requests
 
-Middleware 
+Middleware -
 *   In React native, you might get errors trying to connect to local host serve. So its the best if we use a proxy.
 *   Download Ngrok - https://ngrok.com/
 *   Use Ngrok to connect to the local host and Ngrok will return an url
 *   The url returned is the one we will use
 
-Front End
+Front End -
 *   Open the folder in VsCode
 *   Run command - npm install
 *   Navigate to the below folder
