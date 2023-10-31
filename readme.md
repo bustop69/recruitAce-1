@@ -54,4 +54,4 @@ Front End -
 *   Final step, download expo on your phone and scan the QR code to launch the project.
 
 <h2>🚀 Testing </h2>
-PHPUnit file has been set up in the backend folder, if there are any issues with the Database or connection, run command - php artisan test to test the errors 
+PHP Unit test has been set up in the backend folder, if there are any issues with the Database or connection, run command - php artisan test to test the errors 
