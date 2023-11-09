@@ -2,60 +2,92 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Jobs;
+use App\Models\Job;
 use Illuminate\Http\Request;
 
 class JobPostController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Retrieve and display all job postings from the database.
+     *
+     * @return \Illuminate\Http\JsonResponse
      */
-    //GET
     public function index()
     {
-        $jobPosts = Jobs::all();
-        return response()->json($jobPosts, 200);
+        $jobPosts = Job::all();
+        return response()->json($jobPosts, 201);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Validate and store a new job posting in the database.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'title' => ['required', 'min:2'],
+            'description' => ['required', 'min:2'],
+            'company' => ['required', 'min:2'],
+            'salary' => ['required', 'numeric', 'digits_between:1,10']
+        ]);
         //Update the job post 
         //POST
-        $jobPost = Jobs::create($request->all());
-        return response()->json($jobPost, 200);
+        $jobPost = Job::create($validatedData);
+        return response()->json($jobPost, 201);
     }
 
     /**
-     * Display the specified resource.
+     * Display a specific job posting by its unique identifier.
+     *
+     * @param  string  $id  The unique identifier of the job posting.
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show(string $id)
     {
         //Display individual job post
         //GET
-        $jobPost = Jobs::findOrFail($id);
-        return response()->json($jobPost, 200);
+        $jobPost = Job::findOrFail($id);
+        return response()->json($jobPost, 201);
         //
     }
 
     /**
-     * Update the specified resource in storage.
+     * Validate the request data and update the specified job posting in the database.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  string  $id  The unique identifier of the job posting to update.
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, string $id)
     {
+
         //Update 
         //PUT Request 
-        $jobPost = Jobs::findOrFail($id);
-        $jobPost->update($request->all());
-        return response()->json($jobPost, 200);
+        $jobPost = Job::findOrFail($id);
+
+        $validatedData = $request->validate([
+            'title' => ['required', 'min:2'],
+            'description' => ['required', 'min:2'],
+            'company' => ['required', 'min:2'],
+            'salary' => ['required', 'numeric', 'digits_between:1,10']
+        ]);
+
+        $jobPost->update($validatedData);
+        return response()->json($jobPost, 201);
     }
 
-
+    /**
+     * Remove the specified job posting from the database.
+     *
+     * @param  string  $id  The unique identifier of the job posting to delete.
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function destroy(string $id)
     {
-        $jobPost = Jobs::findOrFail($id);
+        $jobPost = Job::findOrFail($id);
         $jobPost->delete();
+        return response()->json(204);
     }
 }

@@ -9,7 +9,7 @@ export const DELETE_JOB = "DELETE_JOB"
 
 //enter your url below. You must add api/jobs at the end 
 // for example - https://9a45-2a02-c7f-637-7000-3cdb-b4ed-a3b0-f21f.ngrok-free.app/api/jobs/ 
-const API_URL = "https://e515-2a02-c7f-637-7000-5d8a-a6cb-1548-912f.ngrok-free.app/api/jobs"
+const API_URL = "https://f640-2a02-c7f-637-7000-c887-43ef-4b6c-fd7.ngrok-free.app/api/jobs/"
 
 
 export const update = () =>{
